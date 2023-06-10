@@ -7,3 +7,12 @@
   --secondary-color: #f1ae0b;
   --background-color: #fff;
 }
+.primary-btn {
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
