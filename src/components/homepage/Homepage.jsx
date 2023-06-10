@@ -1,10 +1,12 @@
 import "./homepage.css";
-import ReactElasticCarousel from "react-elastic-carousel";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import React from "react";
 import sneaker from "../../assets/images/sneakericon.jpg";
 import handbag from "../../assets/images/handbagIcon.jpg";
 import hoodie from "../../assets/images/hoodieIcon.jpg";
 import slide from "../../assets/images/slidesIcon.jpg";
+import Product from "../product/Product";
 
 function Homepage() {
   return (
@@ -46,7 +48,9 @@ function Homepage() {
       </div>
 
       {/* the right container will hold the carousel */}
-      <div className="right_container"></div>
+      <div className="right_container">
+        <Product />
+      </div>
     </div>
   );
 }
