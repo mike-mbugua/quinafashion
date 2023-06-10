@@ -1,0 +1,21 @@
+.productsection__container {
+  margin-top: 6%;
+}
+.product__container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0px;
+  width: 230px;
+  height: 300px;
+  border-radius: 20px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  align-items: center;
+  background-color: var(--background-color);
+}
+.product__container .product__image {
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 70%;
+}
