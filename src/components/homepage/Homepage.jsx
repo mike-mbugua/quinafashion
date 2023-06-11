@@ -1,7 +1,7 @@
 import "./homepage.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import React from "react";
+import React, { useEffect } from "react";
 import sneaker from "../../assets/images/sneakericon.jpg";
 import handbag from "../../assets/images/handbagIcon.jpg";
 import hoodie from "../../assets/images/hoodieIcon.jpg";
@@ -9,6 +9,12 @@ import slide from "../../assets/images/slidesIcon.jpg";
 import Product from "../product/Product";
 
 function Homepage() {
+  useEffect(() => {
+    fetch("https://quinafashion.onrender.com/clothings")
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  });
+
   return (
     <div className="homepage__container">
       {/*  there are two main divs in this section  our category and a carousel*/}
