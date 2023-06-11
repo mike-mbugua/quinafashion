@@ -26,6 +26,9 @@
   border-radius: 10px;
   justify-content: space-around;
 }
+.navbar__container .nav-btn {
+  opacity: 0;
+}
 .navlinks a {
   color: white;
   list-style: none;
@@ -45,15 +48,33 @@
   cursor: pointer;
 }
 @media (max-width: 576px) {
+  .navbar__container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
   .logo {
-    height: 100px;
-    width: 100px;
-    margin-right: 30%;
+    height: 70px;
+    width: 70px;
+    /* margin-right: 30%; */
     border-radius: 50%;
     background-image: url("../../assets/images/handbagDisplay.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+  }
+  .cart {
+    display: flex;
+    background-image: url("./../../assets/images/cartIcon.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 7vh;
+    width: 16vw;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
   }
   .navlinks {
     display: flex;
@@ -68,9 +89,9 @@
     border-bottom-right-radius: 50px;
   }
   .navbar__container .navlinks {
-    width: 80%;
+    width: 70%;
   }
-  header .nav-btn {
+  .navbar__container .nav-btn {
     visibility: visible;
     opacity: 1;
   }
@@ -81,7 +102,7 @@
     justify-content: center;
     position: fixed;
     top: 0;
-    /* right: 12; */
+    right: 0;
     height: 50%;
     width: 100%;
     gap: 1.5rem;
