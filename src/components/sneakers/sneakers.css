@@ -29,6 +29,7 @@
     align-items: center;
     background-color: var(--secondary-color);
     color: black;
+    justify-content: space-between;
   }
   .sneaker__header h2 {
     font-weight: 300;

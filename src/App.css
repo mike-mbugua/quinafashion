@@ -17,6 +17,10 @@
   cursor: pointer;
 }
 @media (max-width: 576px) {
+  * {
+    margin: 0;
+    box-sizing: none;
+  }
   .primary-btn {
     padding: 5px 10px;
     border: none;
