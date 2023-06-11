@@ -26,12 +26,12 @@ function Navbar() {
         </button>
       </nav>
 
+      <div className="cart"></div>
       <button className="nav-btn" onClick={showNavbar}>
         <FontAwesomeIcon icon={faBars} size="2xl" color="black" />
       </button>
 
       {/* cart section */}
-      {/* <div className="cart"></div> */}
     </header>
   );
 }
