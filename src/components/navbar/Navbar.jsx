@@ -1,25 +1,38 @@
 import "./navbar.css";
-import React from "react";
+import React, { useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import handbagLogo from "../../assets/images/handbagDisplay.jpg";
 function Navbar() {
+  const navRef = useRef();
+  const showNavbar = () => {
+    navRef.current.classList.toggle("responsive_nav");
+  };
   return (
-    <div className="navbar__container">
+    <header className="navbar__container">
       <div className="logo"></div>
 
-      <div className="navlinks">
+      <nav className="navlinks" ref={navRef}>
         <a href="#">Home</a>
         <a href="#">Shop</a>
         <a href="#">Contacts</a>
         <a href="#">Fashions</a>
         <a href="#">Login</a>
         <a href="#">Sign Up</a>
-      </div>
+
+        <button className="nav-btn nav-close-btn" onClick={showNavbar}>
+          <FontAwesomeIcon icon={faTimes} size="2xl" color="black" />
+        </button>
+      </nav>
+
+      <button className="nav-btn" onClick={showNavbar}>
+        <FontAwesomeIcon icon={faBars} size="2xl" color="black" />
+      </button>
 
       {/* cart section */}
-      <div className="cart"></div>
-    </div>
+      {/* <div className="cart"></div> */}
+    </header>
   );
 }
 
