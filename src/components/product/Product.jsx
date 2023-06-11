@@ -15,7 +15,7 @@ function Product() {
         responsive={responsive}
         swipeable={false}
         draggable={false}
-        showDots={true}
+        showDots={false}
         ssr={true} // means to render carousel on server-side.
         infinite={true}
         autoPlay={false}

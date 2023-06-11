@@ -21,7 +21,7 @@
 }
 @media (max-width: 576px) {
   .productsection__container {
-    margin-top: 20%;
+    margin-top: 0%;
   }
   .product__container {
     display: flex;
