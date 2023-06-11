@@ -1,0 +1,85 @@
+.card__container {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  height: 380px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  background-color: var(--background-color);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.card__container img {
+  width: 100%;
+  height: 70%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* {
+    "genderType": "Male",
+    "weartype": "Fashiion Jeans",
+    "image": "https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/34/451132/1.jpg?2838",
+    "price": 1800,
+    "size": "small - Xlarge",
+    "available": true,
+    "description": "A good pair of jeans should be well fitting and good looking without compromising the comfort of the wearer. Explore top quality jeans material, and the slim fit design will give you the perfect polished look. Take your casual wear to the next level with this masterpiece! For casual days, a basic t-shirt and jeans combo works every time."
+},
+{
+    "genderType": "female",
+    "weartype": "Turkey Skirt",
+    "image": "https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/51/950659/1.jpg?7039",
+    "price": 2500,
+    "size": "small - Xlarge",
+    "available": true,
+    "description": "Fashion Ladies Heavy Cotton Quality Turkey Skirt With Belt"
+
+},
+{
+    "genderType": "female",
+    "weartype": "Leather Skirt",
+    "image": "https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/21/429365/1.jpg?8615",
+    "price": 3600,
+    "size": "small - Xlarge",
+    "available": true,
+    "description": "Generic Autumn Ladies Above Knee Black PU Leather Mini Skirts Winter Women High Waist Bodycon Front Split Elegant Short Skirt."
+},
+{
+    "genderType": "Female",
+    "weartype": "High Waist",
+    "image": "https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/70/665465/1.jpg?8964",
+    "price": 3500,
+    "size": "small - Xlarge",
+    "available": true,
+    "description": "Generic High Waist Pleat Elegant Skirt Green Black White Knee-Length Flared Skirts Fashion Women Faldas Saia 5XL Plus Size Ladies Jupe"
+},
+{
+    "genderType": "Male",
+    "weartype": "Shorts",
+    "image": "https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/84/752357/1.jpg?4260",
+    "price": 2500,
+    "size": "small - Xlarge",
+    "available": true,
+    "description": "Fashion 2pcs Men's Shorts Summer Leisure Sports Loose Beach Pants-Black/Dark Blue"
+},
+{
+    "genderType": "Male",
+    "weartype": "Men Suit",
+    "image": "https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/24/941336/1.jpg?5778",
+    "price": 4500,
+    "size": "small - Xlarge",
+    "available": true,
+    "description": "Fashion Men Suit Slim Single-breasted Korean Style Blazer Zipper Fly Pants Light Navy"
+},
+{
+    "genderType": "Unisex ",
+    "weartype": "Hoodie",
+    "image": "https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/95/566193/1.jpg?0461",
+    "price": 1500,
+    "size": "small - Xlarge",
+    "available": true,
+    "description": "Fashion Black Plain Hoodie,Unisex"
+
+} */
