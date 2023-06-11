@@ -18,13 +18,13 @@ function Product() {
         showDots={true}
         ssr={true} // means to render carousel on server-side.
         infinite={true}
-        autoPlay={true}
+        autoPlay={false}
         autoPlaySpeed={3000}
         keyBoardControl={true}
         customTransition="all .4"
         transitionDuration={100}
         containerClass="carousel-container"
-        removeArrowOnDeviceType={["tablet", "mobile"]}
+        removeArrowOnDeviceType={["tablet"]}
       >
         <div className="product__container">
           <img className="product__image" src={airmax} alt="" />
