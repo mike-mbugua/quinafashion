@@ -19,3 +19,20 @@
   justify-content: space-evenly;
   height: 100vh;
 }
+@media (max-width: 576px) {
+  .sneaker__header {
+    display: flex;
+    width: 100%;
+    margin-top: 2%;
+    height: 30px;
+    border-radius: 0px;
+    align-items: center;
+    background-color: var(--secondary-color);
+    color: black;
+  }
+  .sneaker__header h2 {
+    font-weight: 300;
+    font-size: 1.8rem;
+    margin-left: 0px;
+  }
+}
