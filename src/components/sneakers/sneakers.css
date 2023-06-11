@@ -36,4 +36,10 @@
     font-size: 1.8rem;
     margin-left: 0px;
   }
+  .sneaer-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 100vh;
+  }
 }
