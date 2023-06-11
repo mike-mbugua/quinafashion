@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "./components/navbar/Navbar";
 import Homepage from "./components/homepage/Homepage";
 import Product from "./components/product/Product";
+import Sneakers from "./components/sneakers/Sneakers";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Navbar />
       <Homepage />
       {/* <Product /> */}
+      <Sneakers />
     </div>
   );
 }
