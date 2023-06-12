@@ -62,8 +62,12 @@ function Product() {
         </div>
 
         <div className="product__container">
-          <img className="product__image" src={slide} alt="" />
-          <h3>Slide</h3>
+          <img
+            className="product__image"
+            src="https://ke.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/77/626249/1.jpg?5472"
+            alt=""
+          />
+          <h3>Slides</h3>
           <p>$0.99</p>
           <button className="primary-btn">Add To cart</button>
         </div>
