@@ -28,7 +28,7 @@ function Product() {
       >
         <div className="product__container">
           <img className="product__image" src={airmax} alt="" />
-          <h3>Air max</h3>
+          <h3>Yeezy</h3>
           <p>$29.99</p>
           <button className="primary-btn">Add To cart</button>
         </div>
