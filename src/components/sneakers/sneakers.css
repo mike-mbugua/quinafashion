@@ -17,7 +17,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  height: 100vh;
+  height: 85%;
+}
+.paginate {
+  height: 2%;
 }
 .loader-container {
   height: 50vh;
@@ -51,6 +54,11 @@
   color: var(--secondary-color);
   transform: rotateY(70deg);
   animation-delay: 0.4s;
+}
+.fashion__container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 @keyframes rotate {
@@ -129,6 +137,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    height: 100vh;
+    height: 90%;
   }
 }
