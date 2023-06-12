@@ -7,29 +7,26 @@ function Sneakers({ data }) {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    let fetchData = async () => {
-      setIsLoading(true);
+    setIsLoading(true);
 
-      try {
-        let response = await fetch(
-          "https://quinafashion.onrender.com/clothings"
-        );
-
-        let data = await response.json();
-        setClothes(data);
-      } catch (error) {
-        console.log(error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-    fetchData();
+    fetch("https://quinafashion.onrender.com/clothings").then((resp) =>
+      resp
+        .json()
+        .then((data) => {
+          setClothes(data);
+          setIsLoading(false);
+        })
+        .catch((err) => {
+          console.log(err);
+          setIsLoading(false);
+        })
+    );
   }, []);
 
   if (isLoading) {
     return (
-      <div>
-        <p>Loading ...</p>
+      <div className="loader-container">
+        <span className="loader"></span>
       </div>
     );
   }
