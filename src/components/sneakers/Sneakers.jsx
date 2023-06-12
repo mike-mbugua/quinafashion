@@ -46,7 +46,7 @@ function Sneakers({ data }) {
   return (
     <div className="sneaker__container">
       <div className="sneaker__header">
-        <h2>Sneakers</h2>
+        <h2>Available Fashions</h2>
       </div>
 
       <div className="sneaer-card-container">
