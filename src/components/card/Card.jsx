@@ -1,7 +1,9 @@
+import Details from "../item details/details";
 import "./card.css";
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
-function Card({ description, image, gender, amount, size, type }) {
+function Card({ description, image, gender, amount, size, type, itemId }) {
   return (
     <div className="cardmain__container">
       <div className="card__container">
@@ -9,7 +11,9 @@ function Card({ description, image, gender, amount, size, type }) {
         <h2>{type}</h2>
         <p>Sizes: {size}</p>
         <h4>ksh {amount}</h4>
-        <button className="primary-btn">View Details</button>
+        <Link className="primary-btn" to={`/fashions/${itemId}`}>
+          View Details
+        </Link>
       </div>
     </div>
   );
