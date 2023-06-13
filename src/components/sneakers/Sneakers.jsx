@@ -43,6 +43,7 @@ function Sneakers() {
       amount={e.price}
       image={e.image}
       size={e.size}
+      itemId={e.id}
     />
   ));
 
