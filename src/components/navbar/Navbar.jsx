@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import handbagLogo from "../../assets/images/handbagDisplay.jpg";
+import { Link } from "react-router-dom";
+import Sneakers from "../sneakers/Sneakers";
 function Navbar() {
   const navRef = useRef();
   const showNavbar = () => {
@@ -14,10 +16,10 @@ function Navbar() {
       <div className="logo"></div>
 
       <nav className="navlinks" ref={navRef}>
-        <a href="#">Home</a>
+        <Link to={"/"}>Home</Link>
         <a href="#">Shop</a>
         <a href="#">Contacts</a>
-        <a href="#">Fashions</a>
+        <Link to="#fashions">Fashions</Link>
         <a href="#">Login</a>
         <a href="#">Sign Up</a>
 

@@ -52,7 +52,7 @@ function Sneakers() {
   };
 
   return (
-    <div className="fashion__container">
+    <div className="fashion__container" id="fashions">
       <div className="sneaker__container">
         <div className="sneaker__header">
           <h2>Available Fashions</h2>
