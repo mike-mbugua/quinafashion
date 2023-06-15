@@ -3,6 +3,7 @@ import "./details.css";
 import Cart from "../Cart/Cart";
 import { CartContext } from "../Cart/CartContext";
 import Sneakers from "../sneakers/Sneakers";
+import { Link } from "react-router-dom";
 function Details({
   description,
   genderType,
@@ -30,12 +31,13 @@ function Details({
           <h3>Item Description</h3>
           <p>{description}</p>
         </div>
-        <button
+        <Link
           className="primary-btn"
-          onClick={() => addToCart({ itemId, wearType, price, size, image })}
+          to={"/"}
+          // onClick={() => addToCart({ itemId, wearType, price, size, image })}
         >
-          add to cart
-        </button>
+          Back to Order
+        </Link>
       </div>
 
       {/* <Sneakers /> */}

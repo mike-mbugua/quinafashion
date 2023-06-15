@@ -24,7 +24,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/fashions/:id" element={<ItemDetailsPage />} />
-          {/* <Route path="/cart" element={<Cart />} /> */}
         </Routes>
       </Router>
     </CartProvider>

@@ -9,7 +9,11 @@ function Sneakers() {
   const [isLoading, setIsLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(10);
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(() => {
+    // Get cartItems from local storage or default to an empty array
+    const storedCartItems = localStorage.getItem("cartItems");
+    return storedCartItems ? JSON.parse(storedCartItems) : [];
+  });
 
   const handleAddToCart = (item) => {
     setCartItems([...cartItems, item]);
@@ -19,6 +23,10 @@ function Sneakers() {
     const updatedCartItems = cartItems.filter((item) => item.id !== itemId);
     setCartItems(updatedCartItems);
   };
+  useEffect(() => {
+    // Save cartItems to local storage when it changes
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  }, [cartItems]);
 
   useEffect(() => {
     setIsLoading(true);

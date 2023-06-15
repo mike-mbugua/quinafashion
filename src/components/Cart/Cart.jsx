@@ -1,7 +1,12 @@
+import React, { useEffect, useState } from "react";
 import "./Cart.css";
-import React from "react";
 
 function Cart({ cartItems, removeItem }) {
+  useEffect(() => {
+    // Save cartItems to local storage when it changes
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  }, [cartItems]);
+
   return (
     <div className="cart__main__container">
       <h2>Cart</h2>
@@ -10,25 +15,33 @@ function Cart({ cartItems, removeItem }) {
           <p>Your cart is empty.</p>
         ) : (
           <table>
-            {cartItems.map((item) => (
-              <div key={item.id} className="ul-cart-container">
-                <div>
-                  <img src={item.image} alt="" />
-                </div>
-                <div>
-                  <p>{item.type}</p>
-                </div>
-                <p>{item.amount}</p>
-                <div>
-                  <button
-                    className="primary-btn"
-                    onClick={() => removeItem(item.id)}
-                  >
-                    Remove
-                  </button>
-                </div>
-              </div>
-            ))}
+            <tbody>
+              {cartItems.map((item) => (
+                <tr key={item.id} className="ul-cart-container">
+                  <td>
+                    <div>
+                      <img src={item.image} alt="" />
+                    </div>
+                  </td>
+                  <td>
+                    <div>
+                      <p>{item.type}</p>
+                    </div>
+                  </td>
+                  <td>{item.amount}</td>
+                  <td>
+                    <div>
+                      <button
+                        className="primary-btn"
+                        onClick={() => removeItem(item.id)}
+                      >
+                        Remove
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
           </table>
         )}
       </div>
