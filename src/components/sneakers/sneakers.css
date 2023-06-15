@@ -21,6 +21,7 @@
 }
 .paginate {
   height: 2%;
+  margin-bottom: 50px;
 }
 .loader-container {
   height: 50vh;

@@ -25,6 +25,16 @@
   align-items: center;
   margin: 10px;
 }
+.table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.order-container {
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
 
 .ul-cart-container img {
   width: 80px;

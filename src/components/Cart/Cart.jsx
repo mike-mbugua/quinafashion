@@ -2,9 +2,12 @@ import React, { useEffect, useState } from "react";
 import "./Cart.css";
 
 function Cart({ cartItems, removeItem }) {
+  const [totalAmount, setTotalAmount] = useState(0);
   useEffect(() => {
     // Save cartItems to local storage when it changes
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    const amount = cartItems.reduce((total, item) => total + item.amount, 0);
+    setTotalAmount(amount);
   }, [cartItems]);
 
   return (
@@ -14,7 +17,7 @@ function Cart({ cartItems, removeItem }) {
         {!cartItems || cartItems.length === 0 ? (
           <p>Your cart is empty.</p>
         ) : (
-          <table>
+          <table className="table">
             <tbody>
               {cartItems.map((item) => (
                 <tr key={item.id} className="ul-cart-container">
@@ -42,6 +45,10 @@ function Cart({ cartItems, removeItem }) {
                 </tr>
               ))}
             </tbody>
+            <h3>Total to be paid: {totalAmount}</h3>
+            <div className="order-container">
+              <button className="primary-btn">Order</button>
+            </div>
           </table>
         )}
       </div>
