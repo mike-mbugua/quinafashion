@@ -8,6 +8,7 @@ import hoodie from "../../assets/images/hoodieIcon.jpg";
 import slide from "../../assets/images/slidesIcon.jpg";
 import Product from "../product/Product";
 import Sneakers from "../sneakers/Sneakers";
+import Cart from "../Cart/Cart";
 
 function Homepage() {
   return (

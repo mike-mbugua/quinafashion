@@ -2,12 +2,23 @@ import "./sneakers.css";
 import React, { useState, useEffect } from "react";
 import Card from "../card/Card";
 import Pagination from "../pagination/Pagination";
+import Cart from "../Cart/Cart";
 
 function Sneakers() {
   const [clothes, setClothes] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(10);
+  const [cartItems, setCartItems] = useState([]);
+
+  const handleAddToCart = (item) => {
+    setCartItems([...cartItems, item]);
+  };
+
+  const handleRemoveItem = (itemId) => {
+    const updatedCartItems = cartItems.filter((item) => item.id !== itemId);
+    setCartItems(updatedCartItems);
+  };
 
   useEffect(() => {
     setIsLoading(true);
@@ -44,6 +55,7 @@ function Sneakers() {
       image={e.image}
       size={e.size}
       itemId={e.id}
+      addToCart={handleAddToCart}
     />
   ));
 
@@ -67,6 +79,7 @@ function Sneakers() {
           onPageClick={handlePaginationClick}
           currentPage={currentPage}
         />
+        <Cart cartItems={cartItems} removeItem={handleRemoveItem} />
       </div>
     </div>
   );

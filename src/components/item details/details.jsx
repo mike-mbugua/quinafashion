@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./details.css";
-
+import Cart from "../Cart/Cart";
+import { CartContext } from "../Cart/CartContext";
+import Sneakers from "../sneakers/Sneakers";
 function Details({
   description,
   genderType,
@@ -11,6 +13,8 @@ function Details({
   wearType,
   itemId,
 }) {
+  const { cart, addToCart, removeItem } = useContext(CartContext);
+
   return (
     <div className="details__container">
       <div className="item__desc">
@@ -26,8 +30,16 @@ function Details({
           <h3>Item Description</h3>
           <p>{description}</p>
         </div>
-        <button className="primary-btn">Add to Cart</button>
+        <button
+          className="primary-btn"
+          onClick={() => addToCart({ itemId, wearType, price, size, image })}
+        >
+          add to cart
+        </button>
       </div>
+
+      {/* <Sneakers /> */}
+      {/* <Cart cartItems={cart} removeItem={removeItem} /> */}
     </div>
   );
 }
