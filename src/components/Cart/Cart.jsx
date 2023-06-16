@@ -12,14 +12,16 @@ function Cart({ cartItems, removeItem }) {
   }, [cartItems]);
 
   const handlePlaceOrder = () => {
-    const message = cartItems
-      .map((item) => `${item.type}: ${item.amount}`)
-      .join("\n");
+    const message =
+      "Hello QuinaFashiion Here is my items Selection " +
+      cartItems.map((item) => `${item.type}: ${item.amount}`).join("\n");
     const phoneNumber = 254705197981;
     const whatsppUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
       message
     )}`;
-    window.location.href = whatsppUrl;
+
+    window.open(whatsppUrl, "_blank");
+    localStorage.clear();
   };
 
   return (
