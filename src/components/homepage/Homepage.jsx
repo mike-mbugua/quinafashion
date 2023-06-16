@@ -9,6 +9,7 @@ import slide from "../../assets/images/slidesIcon.jpg";
 import Product from "../product/Product";
 import Sneakers from "../sneakers/Sneakers";
 import Cart from "../Cart/Cart";
+import Footer from "../footer/Footer";
 
 function Homepage() {
   return (
@@ -56,6 +57,7 @@ function Homepage() {
         </div>
       </div>
       <Sneakers />
+      {/* <Footer /> */}
     </div>
   );
 }

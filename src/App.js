@@ -14,17 +14,18 @@ import {
 import Details from "./components/item details/details";
 import ItemDetailsPage from "./components/item details page/ItemDetailsPage";
 import Cart from "./components/Cart/Cart";
+import Footer from "./components/footer/Footer";
 
 function App() {
   return (
     <CartProvider>
-      {/* <Navbar /> */}
       <Router>
         <Navbar />
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/fashions/:id" element={<ItemDetailsPage />} />
         </Routes>
+        {/* <Footer /> */}
       </Router>
     </CartProvider>
   );

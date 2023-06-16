@@ -34,9 +34,9 @@ function Details({
         <Link
           className="primary-btn"
           to={"/"}
-          // onClick={() => addToCart({ itemId, wearType, price, size, image })}
+          onClick={() => addToCart({ itemId, wearType, price, size, image })}
         >
-          Back to Order
+          add to cart
         </Link>
       </div>
 

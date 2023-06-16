@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Card from "../card/Card";
 import Pagination from "../pagination/Pagination";
 import Cart from "../Cart/Cart";
+import Footer from "../footer/Footer";
 
 function Sneakers() {
   const [clothes, setClothes] = useState([]);
@@ -88,6 +89,7 @@ function Sneakers() {
           currentPage={currentPage}
         />
         <Cart cartItems={cartItems} removeItem={handleRemoveItem} />
+        {/* <Footer /> */}
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Cart.css";
+import { useHistory } from "react-router-dom";
 
 function Cart({ cartItems, removeItem }) {
   const [totalAmount, setTotalAmount] = useState(0);
@@ -9,6 +10,17 @@ function Cart({ cartItems, removeItem }) {
     const amount = cartItems.reduce((total, item) => total + item.amount, 0);
     setTotalAmount(amount);
   }, [cartItems]);
+
+  const handlePlaceOrder = () => {
+    const message = cartItems
+      .map((item) => `${item.type}: ${item.amount}`)
+      .join("\n");
+    const phoneNumber = 254705197981;
+    const whatsppUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+    window.location.href = whatsppUrl;
+  };
 
   return (
     <div className="cart__main__container">
@@ -47,7 +59,9 @@ function Cart({ cartItems, removeItem }) {
             </tbody>
             <h3>Total to be paid: {totalAmount}</h3>
             <div className="order-container">
-              <button className="primary-btn">Order</button>
+              <button className="primary-btn" onClick={handlePlaceOrder}>
+                Order
+              </button>
             </div>
           </table>
         )}
